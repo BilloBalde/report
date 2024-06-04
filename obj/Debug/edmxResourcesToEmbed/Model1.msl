@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="fairplayModelStoreContainer" CdmEntityContainer="fairplayEntities">
+    <EntitySetMapping Name="departement">
+      <EntityTypeMapping TypeName="fairplayModel.departement">
+        <MappingFragment StoreEntitySet="departement">
+          <ScalarProperty Name="idDep" ColumnName="idDep" />
+          <ScalarProperty Name="libelleDep" ColumnName="libelleDep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="fairplayModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="idemp" ColumnName="idemp" />
+          <ScalarProperty Name="prenomemp" ColumnName="prenomemp" />
+          <ScalarProperty Name="nomemp" ColumnName="nomemp" />
+          <ScalarProperty Name="fonction" ColumnName="fonction" />
+          <ScalarProperty Name="salaire" ColumnName="salaire" />
+          <ScalarProperty Name="idDepartment" ColumnName="idDepartment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

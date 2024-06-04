@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="fairplayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="departement">
+    <Key>
+      <PropertyRef Name="idDep" />
+    </Key>
+    <Property Name="idDep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="libelleDep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="idemp" />
+    </Key>
+    <Property Name="idemp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prenomemp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nomemp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fonction" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="salaire" Type="Int32" />
+    <Property Name="idDepartment" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="fairplayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="departement" EntityType="Self.departement" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" />
+  </EntityContainer>
+</Schema>
